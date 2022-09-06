@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="essential.css" />
+    <title>Sweepstakes</title>
+</head>
+<body>
+    <div class="container">
+        <div id="genSetup" class="wrapable">
+            <div class="flex">
+                <span class="title">Setup sweepstake</span><button onclick="wrap(event)" class="light right">hide/show</button>
+            </div>
+            <div class="content">
+                    <label>Numbers to generate:</label><input id="draw-limit" class="small" type="number" value="10" max="100" min="0"/>
+                    <span>Values:</span>
+                    <label>min</label><input class="small" id="min-value" type="number" value="0" max="99" min="0"/>
+                    <label>max</label><input class="small" id="max-value" type="number" value="20" max="100" min="0"/>
+                    <label>Number of guesses:</label><input id="mark-limit" class="small" type="number" value="3" max="50" min="0"/>
+                    <br><br>
+                    <button onclick="clearConfiguration()" class="">Clear</button>
+                    <button onclick="applyConfiguration()" class="">Apply</button>
+            </div>
+        </div>
+        <div id="markNum" class="wrapable">
+            <div class="flex">
+                <span class="title">Mark numbers</span><button onclick="runSweepstake()">Generate</button><button onclick="wrap(event)" class="light right">hide/show</button>
+            </div>
+            <div class="content">
+                <div id="markNumbers">
+
+                </div>
+                
+            </div>
+        </div>
+        <div id="genResult" class="wrapable">
+            <div class="flex">
+                <span class="title">Result</span><button onclick="chckMarks()">Check numbers</button><button onclick="wrap(event)" class="light right">hide/show</button>
+            </div>
+            <div class="content">
+                <div id="resultContent">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="functions.js"></script> 
+<script src="essential.js"></script> 
+<script src="base.js"></script> 
+<script src="generation.js"></script> 
+</html>

@@ -1,0 +1,125 @@
+:root {
+    --main-color: #030020;
+    --secondary-color: #48409E;
+    --font-color: black;
+    --font-color-rev: white;
+    --acc-color-one: #0A007D;
+    --acc-color-two: #05003F;
+}
+
+* {
+    font-family: "Bahnschrift", "Arial";
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--font-color);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.container {
+    width: 50%;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+    .container > * {
+        margin-block: 1rem;
+    }
+
+#genSetup, #genResult, #markNum, #kaptResult {
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0,.18,0,1);
+    text-align: center;
+}
+
+    #genSetup.wrap, #genResult.wrap, #markNum.wrap, #kaptResult.wrap {
+        height: 2.4rem;
+    }
+
+.content {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+}
+
+    .flex > * {
+        margin-inline: 0.25rem;
+    }
+
+    .flex > .right {
+        margin-left: auto;
+    }
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.NumberDrawInput {
+    width: 3rem;
+    height: 2rem;
+    font-size: large;
+    padding: 0.11rem;
+}
+
+button {
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding-inline: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button.text {
+    background: transparent;
+    border: none;
+}
+
+input {
+    margin-inline: 0.5rem;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+input.small {
+    width: 3rem;
+    height: 1.5rem;
+}
+
+button.light {
+    background: var(--acc-color-one);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--font-color-rev);
+    opacity: 0.5;
+    padding-inline: 0.5rem;
+}
